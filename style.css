@@ -1,0 +1,479 @@
+/* Geral */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+/*Barra de navegação lateral*/
+.navLateral {
+    height: 100%;
+    width: 70px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: auto;
+    padding-right: auto;
+    margin-top: 10rem;
+}
+
+nav a {
+    color: black;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Container inicial*/
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+/* conteudo inicial */
+#mainpresent {
+    background-image: url(./imgs/BgImgAQVU.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#mainpresent h1 {
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#mainpresent h1:nth-child(1) {
+    animation-delay: .8s;
+}
+
+#mainpresent h1:nth-child(2) {
+    animation-delay: 1.8s;
+}
+
+#mainpresent h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 2.8s;
+}
+
+#mainpresent h1 span {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 0%;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+    background-color: orange;
+
+}
+
+#mainpresent h1:nth-child(1) span {
+    animation-delay: 0.6s;
+}
+
+#mainpresent h1:nth-child(2) span {
+    animation-delay: 1.6s;
+}
+
+#mainpresent h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#mainpresent::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1
+}
+
+#mainpresent .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: orange;
+    background-color: transparent;
+    border: 2px solid orange;
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+}
+
+#mainpresent .cta:hover {
+    color: white;
+    font-weight: 700;
+    background-color: orange;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: 0.4;
+}
+
+/* portifolio */
+
+#portfolio .portfolio {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#portfolio .portfolio-header h1 {
+    margin-bottom: 50px;
+}
+
+#portfolio .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portfolio .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#portfolio .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #5a10b5 0%, #002349 100%);
+    color: white;
+}
+
+#portfolio .project-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#portfolio .project-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#portfolio .project-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#portfolio .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.7;
+}
+
+#portfolio .project-img img {
+    transition: 0.5s ease transform;
+}
+
+#portfolio .project-item:hover .project-img img {
+    transform: scale(1.1);
+}
+
+/* contatos */
+#contact {
+    display: flex;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.areaContact {
+    display: flex;
+    margin-top: 20px;
+}
+
+.areaContact img {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+
+    border-radius: 20px;
+}
+
+.areaContact ul {
+    display: flex;
+    flex-direction: wrap;
+
+}
+
+.areaContact ul li {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.areaContact ul li a {
+    font-size: 2rem;
+    margin-left: 30px;
+}
+
+.contact-title {
+    display: flex;
+    font-size: 3rem;
+
+}
+
+/* #contact h1{
+    margin-top: 10px;
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+} */
+/* roda pé */
+footer {
+    display: block;
+    text-align: center;
+    background-color: grey;
+    color: white;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+
+}
+
+.final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    width: 200px;
+}
+
+/* key frames */
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 100%;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: orange;
+        font-weight: 500px;
+    }
+}
+
+
+
+
+
+
+
+/* erro page */
+
+#mcentral {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./imgs/page404.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+.central {
+    border: 2px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.central h1 {
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    
+}
+
+
+.central .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: red;
+    background-color: white;
+
+    border: 2px solid red;
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    margin-top: 20px;   
+}
+.central:hover {
+    background-color: black;
+    color: white;
+}
+.cta:hover {
+    color: white;
+    font-weight: 700;
+    background-color: red;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: 0.4;
+}
+/* meme */
+.memecontain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+    
+}
+
+.memecontain a {
+    margin-top: 20px;
+    font-size: 4rem;
+    text-decoration: none;
+}
+.memecontain a{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.memes {
+    min-height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    
+}
+.mcards{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+.cardm{
+    display: block;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+    
+
+}
